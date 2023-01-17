@@ -9,10 +9,12 @@ namespace Git_Test
     class Program
     {
         private int steve;
+
         public int getSteve()
         {
             return steve;
         }
+
         public void setSteve(int i)
         {
             steve = i;
@@ -21,10 +23,24 @@ namespace Git_Test
         {
             Console.WriteLine("Hello World" + 5);
             Console.ReadKey();
+
             Console.WriteLine("Setting steve to 4");
             Program p = new Program();
             p.setSteve(4);
             Console.WriteLine("Steve is: " + p.getSteve());
+            Console.ReadKey();
+
+            Console.WriteLine("Enter lower bound.");
+            int lower_bound = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Upper bound.");
+            int upper_bound = int.Parse(Console.ReadLine());
+
+            var rand = new Random();
+            int guess = rand.Next(lower_bound, upper_bound + 1);
+
+            Console.WriteLine("I'm guessing of a number between " + lower_bound + " and " + upper_bound + ".");
+            Console.ReadKey();
+            Console.WriteLine("It was " + guess + ".");
             Console.ReadKey();
         }
     }
