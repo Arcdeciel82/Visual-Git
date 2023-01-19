@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Curt Lynch
+// 1/19/2023
+// Getting into git
+// Hello world, with a simple number guessing game.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
