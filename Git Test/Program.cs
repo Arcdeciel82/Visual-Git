@@ -36,11 +36,23 @@ namespace Git_Test
             int upper_bound = int.Parse(Console.ReadLine());
 
             var rand = new Random();
-            int guess = rand.Next(lower_bound, upper_bound + 1);
+            int randomNum = rand.Next(lower_bound, upper_bound + 1);
 
             Console.WriteLine("I'm guessing of a number between " + lower_bound + " and " + upper_bound + ".");
-            Console.ReadKey();
-            Console.WriteLine("It was " + guess + ".");
+            int userGuess = int.Parse(Console.ReadLine());
+            while(userGuess != randomNum)
+            {
+                if(userGuess < randomNum)
+                {
+                    Console.WriteLine("Too low. Try again.");
+                }
+                if (userGuess > randomNum)
+                {
+                    Console.WriteLine("Too high. Try again.");
+                }
+                userGuess = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Yay, it was " + randomNum + "!");
             Console.ReadKey();
         }
     }
